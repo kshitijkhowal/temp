@@ -5,7 +5,7 @@ const Cards = ({item}) => {
     return (
         <>
             <div className='my-6'>
-                <div className="card bg-base-100 w-96 shadow-xl">
+                <div className="card bg-base-100 w-96 shadow-xl hover:scale-105 duration-200">
                     <figure>
                         <img
                             src={item.image}
@@ -16,7 +16,7 @@ const Cards = ({item}) => {
                     <div className="card-body">
                         <h2 className="card-title">
                             {item.name}
-                            <div className="badge badge-secondary">Free</div>
+                            <div className="badge badge-secondary">{item.price===0 ? "Free" : "Paid"}</div>
                         </h2>
                         <p>{item.title}</p>
                         <div className="card-actions justify-between">

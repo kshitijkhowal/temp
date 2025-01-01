@@ -19,7 +19,7 @@
     {
         "id":3,
         "name":"Sports Book",
-        "title":" From inspiring athlete biographies and game strategies to iconic moments in sports history, these books are a must-read for fans, players, and enthusiasts alike.",
+        "title":" From inspiring athlete biographies  to iconic moments in sports history, these books are a must-read for players, and enthusiasts alike.",
         "price":50,
         "category":"sports",
         "image":"https://img.freepik.com/free-psd/gradient-sport-template-design_23-2149287760.jpg?t=st=1735735766~exp=1735739366~hmac=f5a0a0e39130414250e386c20a411ba7516a408e0a52a0167457e009d098b72c&w=740"
@@ -103,5 +103,37 @@
         "price":0,
         "category":"chemistry",
         "image":"https://img.freepik.com/premium-photo/classroom_23785-393.jpg?w=740"
+    },
+    {
+        "id":14,
+        "name":"Music Book",
+        "title":"Immerse yourself in the world of music with our captivating collection of music books.",
+        "price":80,
+        "category":"music",
+        "image":"https://img.freepik.com/premium-photo/music-song-writing-equipment-blank-book-guitar-headphone-song-writing_39408-1810.jpg?w=826"
+    },
+    {
+        "id":15,
+        "name":"Music Book",
+        "title":"Immerse yourself in the world of music with our captivating collection of music books.",
+        "price":80,
+        "category":"music",
+        "image":"https://img.freepik.com/premium-photo/music-song-writing-equipment-blank-book-guitar-headphone-song-writing_39408-1810.jpg?w=826"
+    },
+    {
+        "id":16,
+        "name":"Music Book",
+        "title":"Immerse yourself in the world of music with our captivating collection of music books.",
+        "price":80,
+        "category":"music",
+        "image":"https://img.freepik.com/premium-photo/music-song-writing-equipment-blank-book-guitar-headphone-song-writing_39408-1810.jpg?w=826"
+    },
+    {
+        "id":17,
+        "name":"Music Book",
+        "title":"Immerse yourself in the world of music with our captivating collection of music books.",
+        "price":80,
+        "category":"music",
+        "image":"https://img.freepik.com/premium-photo/music-song-writing-equipment-blank-book-guitar-headphone-song-writing_39408-1810.jpg?w=826"
     }
 ]
