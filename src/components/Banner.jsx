@@ -1,5 +1,5 @@
 import React from 'react'
-import BANNER from "../../public/books_front.png";
+import BANNER from "../../public/images/books_front.png";
 
 const Banner = () => {
     return (
@@ -10,7 +10,7 @@ const Banner = () => {
 
                         <h1 className='text-4xl font-bold'>
                             Hello, glad to have you here! <br /> Let's discover something <br />
-                            <span className='text-pink-500'>exciting together.</span>
+                            <span className='text-[#FF00D3]'>exciting together.</span>
                         </h1>
 
                         <p className='text-xl'>
