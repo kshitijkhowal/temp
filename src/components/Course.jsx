@@ -8,7 +8,7 @@ const Course = () => {
     return (
         <>
             <div className='max-w-screen-2xl container mx-auto md:px-20 px-4'>
-                <div className='mt-28 items-center justify-center text-center'>
+                <div className='py-28 items-center justify-center text-center'>
                     <h1 className='text-3xl font-semibold md:text-4xl'>
                         Invest in Yourself with Our <span className='text-[#FF00D3]'>Premium Courses!</span>
                     </h1>
