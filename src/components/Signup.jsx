@@ -18,7 +18,7 @@ const Signup = () => {
                         <input
                             type="text"
                             placeholder='Enter your fullname'
-                            className='w-80 p-3 border rounded-md outline-none'
+                            className='w-80 p-3 border rounded-md outline-none dark:text-black'
                         />
                     </div>
                     {/* email */}
@@ -27,7 +27,7 @@ const Signup = () => {
                         <input
                             type="email"
                             placeholder='Enter your email'
-                            className='w-80 p-3 border rounded-md outline-none'
+                            className='w-80 p-3 border rounded-md outline-none dark:text-black'
                         />
                     </div>
                     {/* password */}
@@ -36,7 +36,7 @@ const Signup = () => {
                         <input
                             type="text"
                             placeholder='Enter your password'
-                            className='w-80 p-3 border rounded-md outline-none'
+                            className='w-80 p-3 border rounded-md outline-none dark:text-black'
                         />
                     </div>
                     {/* signup btn */}

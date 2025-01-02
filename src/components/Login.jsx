@@ -12,12 +12,12 @@ const Login = () => {
                     </form>
                     <h3 className="font-bold text-lg mb-6">Login</h3>
                     {/* email */}
-                    <div className='mt-3 space-y-3'>
+                    <div className='mt-3 space-y-3 '>
                         <span>Email</span> <br/>
                         <input 
                             type="email" 
                             placeholder='Enter your email' 
-                            className='w-80 p-3 border rounded-md outline-none'
+                            className='w-80 p-3 border rounded-md outline-none dark:text-black'
                         />
                     </div>
                     {/* password */}
@@ -26,7 +26,7 @@ const Login = () => {
                         <input 
                             type="text" 
                             placeholder='Enter your password' 
-                            className='w-80 p-3 border rounded-md outline-none'
+                            className='w-80 p-3 border rounded-md outline-none dark:text-black'
                         />
                     </div>
                     {/* login btn */}
