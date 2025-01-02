@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Login from './Login';
+import { useAuth } from '../context/AuthProvider';
+import Logout from './Logout.jsx';
 
 const Navbar = () => {
+    const [authUser,setAuthUser]=useAuth();
+
     const [theme,setTheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme"):"light");
     const element=document.documentElement;  // root element of browser
     useEffect(()=>{
@@ -37,7 +41,7 @@ const Navbar = () => {
             <li><a href="/">Home</a></li>
             <li><a href="/courses">Courses</a></li>
             <li><a href="/contact">Contact</a></li>
-            <li><a href="/about">About</a></li>
+            {/* <li><a href="/about">About</a></li> */}
         </>
     )
     return (
@@ -120,16 +124,20 @@ const Navbar = () => {
                                 </svg>
                             </label>
                         </div>
+                        {/* login or logout */}
+                        {
+                            authUser?<Logout/> : 
+                            <div className='px-2 '>
+                                <a className=" bg-black text-white px-3 py-2 rounded-lg hover:bg-slate-800 duration-300 cursor-pointer "
+                                    onClick={()=>document.getElementById("my_modal_3").showModal()}
+                                >
+                                    Login
+                                </a>
+                                <Login/>
+                            </div>
+                        }
+                        
 
-                        {/* login btn */}
-                        <div className='px-2 '>
-                            <a className=" bg-black text-white px-3 py-2 rounded-lg hover:bg-slate-800 duration-300 cursor-pointer "
-                                onClick={()=>document.getElementById("my_modal_3").showModal()}
-                            >
-                                Login
-                            </a>
-                            <Login/>
-                        </div>
                     </div>
                 </div>
             </div>

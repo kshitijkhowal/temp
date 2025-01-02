@@ -1,20 +1,47 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, replace, useLocation, useNavigate } from 'react-router-dom'
 import Login from './Login'
 import { useForm } from "react-hook-form";   // react hook form
 import Navbar from './Navbar';
-
+import axios from "axios";
+import toast from 'react-hot-toast';
 const Signup = () => {
+    const location=useLocation();
+    const navigate=useNavigate();
+    const from=location.state?.from?.pathname || "/"
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm()
 
-    const onSubmit = (data) => console.log(data)
+    const onSubmit = async (data) => {
+        const userInfo = {
+            fullname: data.fullname,
+            email: data.email,
+            password: data.password
+        }
+        // to call api we use axios
+        await axios.post("http://localhost:3000/user/signup", userInfo)
+            .then((res) => {     // then is a promise
+                console.log(data);
+                if (res.data) {
+                    // alert("Signup Successfully");
+                    toast.success('Signup Successfully!');
+                    navigate(from,{replace:true});
+                }
+                localStorage.setItem("User", JSON.stringify(res.data.user));
+            }).catch((err) => {
+                if (err.response) {
+                    console.log(err)
+                    // alert("Error: " + err.response.data.message);
+                    toast.error("Error: " + err.response.data.message);
+                }
+            })
+    }
     return (
         <div className='flex h-screen items-center justify-center dark:bg-slate-900 dark:text-white'>
-            <Navbar/>
+            <Navbar />
             <div className='w-[600px] '>
                 <div className="modal-box dark:bg-slate-900 dark:text-white dark:border ">
                     <form onSubmit={handleSubmit(onSubmit)} method="dialog">
