@@ -10,6 +10,7 @@ dotenv.config();
 
 const app=express();
 app.use(cors());
+const __dirname=path.resolve();
 
 app.use(express.json());
 
@@ -22,10 +23,9 @@ app.use("/user",userRoute);
 
 // deployment
 if(process.env.NODE_ENV==="production"){
-    const dirPath=path.resolve();
-    app.use(express.static("frontend/dist"));
+    app.use(express.static(path.join(__dirname,"../frontend/dist")));
     app.get("*",(req,res)=>{
-        res.sendFile(path.resolve(dirPath,"frontend","dist","index.html"));
+        res.sendFile(path.resolve(dirPath,"../frontend","dist","index.html"));
     })
 }
 
