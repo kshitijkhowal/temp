@@ -10,11 +10,12 @@ dotenv.config();
 
 const app=express();
 app.use(cors());
+
 const __dirname=path.resolve();
+const PORT=process.env.PORT
 
 app.use(express.json());
 
-const PORT=process.env.PORT
 
 
 //defining routes
