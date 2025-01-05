@@ -22,7 +22,7 @@ const Signup = () => {
             password: data.password
         }
         // to call api we use axios
-        await axios.post("/user/signup", userInfo)
+        await axios.post("https://temp-1-lfp0.onrender.com/user/signup", userInfo)
             .then((res) => {     // then is a promise
                 console.log(data);
                 if (res.data) {

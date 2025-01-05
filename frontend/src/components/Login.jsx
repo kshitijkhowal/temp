@@ -18,7 +18,7 @@ const Login = () => {
             password: data.password
         }
         // to call api we use axios
-        await axios.post("/user/login", userInfo)
+        await axios.post("https://temp-1-lfp0.onrender.com/user/login", userInfo)
             .then((res) => {     // then is a promise
                 console.log(data);
                 if (res.data) {
